@@ -2,5 +2,9 @@
 
 
 ## Table of content
-1.[challenge 01](reverse-arr/README.md)<br>
-1.[challenge 02](array-insert-shift/README.md)
+
+
+| Syntax      | Description |    
+| :---        |    :----:   |          
+|challenge 01|[Reverse Array](reverse-arr/README.md)|
+|challenge 02|[Array Insert/Shift](array-insert-shift/README.md)|
