@@ -2,4 +2,10 @@
 
 
 ## Table of content
-1.[challenge 01](reverse-arr/README.md)
+
+
+| Syntax      | Description |    
+| :---        |    :----:   |          
+|challenge 01|[Reverse Array](reverse-arr/README.md)|
+|challenge 02|[Array Insert/Shift](array-insert-shift/README.md)|
+|challenge 03|[Array Binary Search](array-binary-search/README.md)|
