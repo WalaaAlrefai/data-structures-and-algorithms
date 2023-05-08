@@ -7,6 +7,9 @@ __function called reverseArray which takes an array as an argument. Without util
 
 ## Approach & Efficiency
 I used the reverse() method,its the simplest way and workig efficency and matching the expected result
+
+edited
+
 also it takes a little lines of code
 
 ## Solution
