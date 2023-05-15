@@ -13,6 +13,11 @@ __Create two classes, LinkedList and Node. Using test-driven development, implem
 7.Can properly return a collection of all the values that exist in the linked list
 
 
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+
+
 ## Approach & Efficiency
   For each of the features/requirements, I started by making a test that would prove that functionality. From there, I updated the Node and LinkedList classes to create the actual functionality that I would then test. After doing this for all of the features, I wrote docstrings to explain the purpose of each function that I constructed.
 ## Solution

@@ -11,10 +11,10 @@ class Node:
 
 
 
-
 class LinkedList:
 
     def __init__(self, head=None):
+
         """ This is the constructor for the actual linked list.
 
         Arguments: head (optional param that defaults to none and represents the head of the linked list)."""
@@ -22,6 +22,7 @@ class LinkedList:
         self.head=head
 
     def insert(self,value):
+
         """
         Insert a value to the head of the linked list.
 
@@ -69,3 +70,16 @@ class LinkedList:
             current = current.next
 
         return string + 'None'
+    
+
+if __name__=="__main__":
+    ll = LinkedList()
+    ll.insert(10)
+    ll.insert(11)
+    ll.insert(12)
+    ll.insert(13)
+    ll.insert(14)
+    ll.insert(15)
+    print (ll)
+    print(ll.includes(3))
+    print(ll.includes(11))
