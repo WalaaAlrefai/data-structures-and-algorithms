@@ -23,6 +23,76 @@ def test_insert_in_list():
     assert actual == expected
 
 
+# Add node to end of list
+def test_append_node_to_list():
+    link_list = LinkedList()
+    link_list.insert('b')
+    link_list.insert('c')
+    link_list.append('a')
+    actual = str(link_list)
+    expected = "{c}->{b}->{a}->None"
+    assert actual == expected
+
+# Add multiple nodes to end of list
+def test_append_nodes_to_list():
+    link_list = LinkedList()
+    link_list.insert('c')
+    link_list.insert('d')
+    link_list.append('b')
+    link_list.append('a')
+    actual = str(link_list)
+    expected = "{d}->{c}->{b}->{a}->None"
+    assert actual == expected
+
+# insert before middle
+def test_insert_before_middle():
+    link_list = LinkedList()
+    link_list.insert('c')
+    link_list.insert('d')
+    link_list.append('b')
+    link_list.append('a')
+    link_list.insert_before('b', 'middle')
+    actual = str(link_list)
+    expected = "{d}->{c}->{middle}->{b}->{a}->None"
+    assert actual == expected
+
+
+    # insert after middle
+def test_insert_after_middle():
+    link_list = LinkedList()
+    link_list.insert('c')
+    link_list.insert('d')
+    link_list.append('b')
+    link_list.append('a')
+    link_list.insert_after('b', 'middle')
+    actual = str(link_list)
+    expected = "{d}->{c}->{b}->{middle}->{a}->None"
+    assert actual == expected
+
+# insert before first
+def test_insert_before_first():
+    link_list = LinkedList()
+    link_list.insert('c')
+    link_list.insert('d')
+    link_list.append('b')
+    link_list.append('a')
+    link_list.insert_before('d', 'first')
+    actual = str(link_list)
+    expected = "{first}->{d}->{c}->{b}->{a}->None"
+    assert actual == expected
+
+# insert after last
+def test_insert_after_last():
+    link_list = LinkedList()
+    link_list.insert('c')
+    link_list.insert('d')
+    link_list.append('b')
+    link_list.append('a')
+    link_list.insert_after('a', 'last')
+    actual = str(link_list)
+    expected = "{d}->{c}->{b}->{a}->{last}->None"
+    assert actual == expected
+
 # Testing head points (->) to first node
 # checks if the head is points at the firtt node in the list
 def test_list_head():

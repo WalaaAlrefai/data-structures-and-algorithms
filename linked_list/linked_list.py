@@ -71,6 +71,55 @@ class LinkedList:
 
         return string + 'None'
     
+    def append(self, value):
+        """
+        Appends value to end of linked list
+        Arguments: value (value we trying to append).
+        """
+        node = Node(value)
+        current = self.head
+        if self.head == None:
+            self.head = node
+            return
+
+        while current.next is not None:
+            current = current.next
+
+        current.next = node
+
+
+    def insert_before(self,value,new_value):
+
+        current=self.head
+        if current.value == value :
+            self.insert(new_value)
+            return
+        
+        while current is not None:
+           if current.next.value == value :
+               node = Node(new_value)
+               node.next = current.next
+               current.next = node
+
+               return
+           current=current.next
+
+
+    def insert_after(self,value,new_value):
+
+        current=self.head
+        if current.next.value == value :
+            self.insert(new_value)
+            return
+        
+        while current is not None:
+           if current.value == value :
+               node = Node(new_value)
+               node.next = current.next
+               current.next = node
+
+               return
+           current=current.next
 
 if __name__=="__main__":
     ll = LinkedList()
@@ -83,3 +132,14 @@ if __name__=="__main__":
     print (ll)
     print(ll.includes(3))
     print(ll.includes(11))
+    ll.append(9)
+    ll.append(8)
+    ll.append(7)
+    ll.append(5)
+    print(ll)
+    ll.insert_before(5,6)
+    print(ll)
+    ll.insert_after(5,4)
+    ll.insert_after(15,14.5)
+    ll.insert_after(13,14.5)
+    print(ll)
