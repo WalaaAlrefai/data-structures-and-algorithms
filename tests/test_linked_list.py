@@ -145,3 +145,53 @@ def test_linked_list_str():
     actual = str(link_list)
     expected = "{a}->{b}->{c}->None"
     assert actual == expected
+
+
+# Where k is greater than the length of the linked list
+def test_kth_greater_than_len():
+     link_list = LinkedList()
+     link_list.insert(1)
+     link_list.insert(2)
+     link_list.insert(3)
+     link_list.insert(4)
+     with pytest.raises(Exception):
+      link_list.kthFromEnd(5)
+    
+# k and the length of the list are the same
+def test_kth_equal_to_ll_length():
+    link_list = LinkedList()
+    link_list.insert(1)
+    link_list.insert(2)
+    link_list.insert(3)
+    link_list.insert(4)
+    with pytest.raises(Exception):
+        link_list.kthFromEnd(4)
+
+# k is not a positive integer
+def test_kth_negative():
+    link_list = LinkedList()
+    link_list.insert(1)
+    link_list.insert(2)
+    link_list.insert(3)
+    link_list.insert(4)
+    with pytest.raises(Exception):
+        link_list.kthFromEnd(-4)
+
+# LL has a size of 1
+def test_kth_size_one():
+    link_list = LinkedList()
+    link_list.insert(1)
+    actual = link_list.kthFromEnd(0)
+    expected = 1
+    assert actual == expected
+
+# k is somewhere in the middle
+def test_kth_middle_value():
+    link_list = LinkedList()
+    link_list.insert(1)
+    link_list.insert(10)
+    link_list.insert(100)
+    link_list.insert(1000)
+    actual = link_list.kthFromEnd(2)
+    expected = 100
+    assert actual == expected
