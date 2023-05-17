@@ -122,11 +122,6 @@ class LinkedList:
            current=current.next
     
     def kthFromEnd(self, k: int) -> int:
-        """
-        Gets the kth value from the end where the last node in the linked list has an index of 0.
-         Increments by one with each traversal to the left.
-        Arguments: k, which is an integer representing the number of elements from the end.
-        """
         current = self.head
         ll_counter = []
         while current is not None:
