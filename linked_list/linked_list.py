@@ -128,7 +128,10 @@ class LinkedList:
             ll_counter.append(current)
             current = current.next
         ll_size = len(ll_counter)
-        if k < ll_size:
+
+        if k < 0 :
+            raise Exception ('Negative value not accepted')
+        elif k < ll_size:
             return ll_counter[ll_size - (k+1) ].value
         else:
          raise Exception('There is no value at that index!')
@@ -160,3 +163,4 @@ if __name__=="__main__":
     print (ll.kthFromEnd(0))
     print (ll.kthFromEnd(5))
     print (ll.kthFromEnd(18))
+    print (ll.kthFromEnd(-1))
