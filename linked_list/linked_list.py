@@ -89,6 +89,10 @@ class LinkedList:
 
 
     def insert_before(self,value,new_value):
+        """
+        Insert a new_value before the given value of linked list
+        Arguments: two values (value for search , value we trying to insert).
+        """
 
         current=self.head
         if current.value == value :
@@ -106,6 +110,10 @@ class LinkedList:
 
 
     def insert_after(self,value,new_value):
+        """
+        Insert a new_value after the given value of linked list
+        Arguments: two values (value for search , value we trying to insert).
+        """
 
         current=self.head
         if current.next.value == value :
@@ -122,6 +130,11 @@ class LinkedList:
            current=current.next
     
     def kthFromEnd(self, k: int) -> int:
+        '''
+        search for a given kth value if its exist 
+        return the k-th value
+        Argument : int value we trying to search
+        '''
         current = self.head
         ll_counter = []
         while current is not None:
