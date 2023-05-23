@@ -1,4 +1,4 @@
-# Challenge 5
+# Challenge 5 , 6
 
 ## Linked List
 
@@ -40,8 +40,8 @@ __Create two classes, LinkedList and Node. Using test-driven development, implem
 
 
 
-## Whiteboard Process
-<!-- Embedded whiteboard image -->
+## Whiteboard Process for 
+![whiteboard](white-board.jpg)
 
 
 ## Approach & Efficiency
