@@ -121,8 +121,37 @@ class LinkedList:
                return
            current=current.next
 
+def zip_Lists(list1, list2):
+     """
+    This function takes in two linked lists and merges them together.
+
+    Input: Two linked lists
+
+    Output: Merged linked list the alternates between values of the original two linked lists.
+    """
+
+     list1_current = list1.head
+     list2_current = list2.head
+
+
+
+     while list1_current and list2_current:
+        list1_next = list1_current.next
+        list2_next = list2_current.next
+        list1_current.next = list2_current
+        list2_current.next = list1_next
+        last_list1_current = list1_current.next
+        list1_current = list1_next
+        list2_current = list2_next
+        if not list1_current and list2_current:
+         last_list1_current.next = list2_current
+
+
+     return list1
+
 if __name__=="__main__":
     ll = LinkedList()
+    ll2 = LinkedList()
     ll.insert(10)
     ll.insert(11)
     ll.insert(12)
@@ -143,3 +172,11 @@ if __name__=="__main__":
     ll.insert_after(15,14.5)
     ll.insert_after(13,14.5)
     print(ll)
+    ll2.insert(1)
+    ll2.insert(2)
+    ll2.insert(3)
+    ll2.insert(4)
+    ll2.insert(5)
+    ll2.insert(6)
+    print(zip_Lists(ll,ll2))
+    
