@@ -14,5 +14,6 @@
 |challenge 07|[linked-list-kth](./linked-list-kth/README.md)|
 |Challenge 08|[linked_list_zip](./linked_list_zip/README.md)|
 |Challenge 10|[stacks and Queues](./stack_and_queue/README.md)|
-|Challenge11|[stack_queue_pseudo](./stack_queue_pseudo/README.md)|
+|Challenge 11|[stack_queue_pseudo](./stack_queue_pseudo/README.md)|
+|Challenge 12|[animal_shelter_queue](./animal_shelter_queue/README.md)|
 
