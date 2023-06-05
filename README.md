@@ -16,4 +16,5 @@
 |Challenge 10|[stacks and Queues](./stack_and_queue/README.md)|
 |Challenge 11|[stack_queue_pseudo](./stack_queue_pseudo/README.md)|
 |Challenge 12|[animal_shelter_queue](./animal_shelter_queue/README.md)|
+|Challenge13|[stack_queue_brackets](./stack_queue_brackets/README.md)|
 
