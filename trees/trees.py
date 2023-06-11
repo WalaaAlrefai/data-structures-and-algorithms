@@ -90,8 +90,24 @@ class BinaryTree:
                 breadth_queue.enqueue(front.right)
         return output
     
+    def max_tree(self):
 
+            max_value = self.root.value
 
+            def _walk(root):
+               nonlocal max_value
+               if max_value < root.value:
+                   max_value = root.value
+               if root.left:
+                 _walk(root.left)
+               if root.right:
+                  _walk(root.right)
+
+            _walk(self.root)
+            return max_value
+             
+
+    
 
 
 
@@ -138,6 +154,12 @@ class BinarySearchTree(BinaryTree):
                 current = current.right
 
         return False
+    
+
+
+
+
+
 
 
 
@@ -158,6 +180,7 @@ if __name__ == "__main__":
     print ("in_order  :  ", tree.in_order())
     print ("pre_order :  ", tree.pre_order())
     print ("post_order:  ", tree.post_order())
+    print ("max node is :", tree.max_tree())
 
     bst = BinarySearchTree()
     bst.root = TNode(2)
