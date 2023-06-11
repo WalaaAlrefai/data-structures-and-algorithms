@@ -55,6 +55,14 @@ def test_success_bst_contains_value(test_bst):
     assert test_bst.contains(36) == True
 
 
+# Find the Maximum Value in a Binary Tree
+def test_find_maxval_bt(test_tree):
+  expected = "F"
+  actual = test_tree.max_tree()
+  assert actual == expected
+
+
+
 @pytest.fixture
 def test_tree():
 
