@@ -90,11 +90,12 @@ class BinaryTree:
                 breadth_queue.enqueue(front.right)
         return output
     
-    def max_tree(self):
+    def find_maximum_value(self) -> int:
+        """this method is used to find the highest number in tree and return it"""
 
-            max_value = self.root.value
+        max_value = self.root.value
 
-            def _walk(root):
+        def _walk(root):
                nonlocal max_value
                if max_value < root.value:
                    max_value = root.value
@@ -103,8 +104,8 @@ class BinaryTree:
                if root.right:
                   _walk(root.right)
 
-            _walk(self.root)
-            return max_value
+        _walk(self.root)
+        return max_value
              
 
     
