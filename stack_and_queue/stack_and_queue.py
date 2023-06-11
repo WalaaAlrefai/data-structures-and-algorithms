@@ -53,6 +53,7 @@ class Stack:
             current = current.next
 
         return items
+    
 
 
 class Queue():
