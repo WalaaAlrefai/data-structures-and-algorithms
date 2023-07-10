@@ -33,7 +33,7 @@ class BinaryTree:
         return result
 
     def in_order(self):
-        """method handle the in-order by recurssion and return the values in tree as array"""
+        """method handle the in-order by recurssion and return the values in tree as array left /Root /Right"""
         if not self.root:
             return self.root
 
@@ -89,6 +89,33 @@ class BinaryTree:
             if front.right:
                 breadth_queue.enqueue(front.right)
         return output
+    
+    def sum_odds(self):
+         if not self.root:
+            return self.root
+
+         result = []
+
+         def _walk(root):
+
+            if root.left:
+                _walk(root.left)
+
+            result.append(root.value)
+
+            if root.right:
+                _walk(root.right)
+
+         _walk(self.root)
+
+         sum_=0
+
+         for i in result :
+             if i % 2 != 0 :
+                 sum_= sum_+ i
+         return sum_
+                 
+
     
 
 
@@ -158,6 +185,7 @@ if __name__ == "__main__":
     print ("in_order  :  ", tree.in_order())
     print ("pre_order :  ", tree.pre_order())
     print ("post_order:  ", tree.post_order())
+    
 
     bst = BinarySearchTree()
     bst.root = TNode(2)
@@ -172,6 +200,9 @@ if __name__ == "__main__":
     print(bst.contains(5))
     print(bst.contains(1))
     print (bst.post_order())
+    
+
+    print (tree.sum_odds())
 
 
     # print(tree.breadth_first())
