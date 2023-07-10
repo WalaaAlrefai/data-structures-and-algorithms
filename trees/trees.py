@@ -90,35 +90,25 @@ class BinaryTree:
                 breadth_queue.enqueue(front.right)
         return output
     
-    def sum_odds(self):
-         if not self.root:
-            return self.root
+    def find_maximum_value(self) -> int:
+        """this method is used to find the highest number in tree and return it"""
 
-         result = []
+        max_value = self.root.value
 
-         def _walk(root):
+        def _walk(root):
+               nonlocal max_value
+               if max_value < root.value:
+                   max_value = root.value
+               if root.left:
+                 _walk(root.left)
+               if root.right:
+                  _walk(root.right)
 
-            if root.left:
-                _walk(root.left)
-
-            result.append(root.value)
-
-            if root.right:
-                _walk(root.right)
-
-         _walk(self.root)
-
-         sum_=0
-
-         for i in result :
-             if i % 2 != 0 :
-                 sum_= sum_+ i
-         return sum_
-                 
+        _walk(self.root)
+        return max_value
+             
 
     
-
-
 
 
 
@@ -165,6 +155,12 @@ class BinarySearchTree(BinaryTree):
                 current = current.right
 
         return False
+    
+
+
+
+
+
 
 
 
@@ -185,7 +181,7 @@ if __name__ == "__main__":
     print ("in_order  :  ", tree.in_order())
     print ("pre_order :  ", tree.pre_order())
     print ("post_order:  ", tree.post_order())
-    
+    print ("max node is :", tree.max_tree())
 
     bst = BinarySearchTree()
     bst.root = TNode(2)
