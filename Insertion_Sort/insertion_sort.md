@@ -1,6 +1,6 @@
 # Insertion Sort.
 
-## -Challenge 26 Tracing a Pseudocode 
+## Challenge 26 Tracing a Pseudocode 
 
 ## [Code in Python](insertion_sort.py)
 ## [tests](../tests/test_insertion_sort.py)
