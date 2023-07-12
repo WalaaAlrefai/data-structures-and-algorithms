@@ -1,8 +1,7 @@
 # Merge Sort.
 
 
-## -Language: `Python`
-## -Challenge Type:  Code Challenge / Tracing a Pseudocode 
+## -Challenge 27:  Code Challenge / Tracing a Pseudocode 
 
 ## [Code in Python](./merge_sort.py)
 ## [tests](../tests/test_merge_sort.py)
