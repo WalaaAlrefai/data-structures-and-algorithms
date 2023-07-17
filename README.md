@@ -17,4 +17,10 @@
 |Challenge 11|[stack_queue_pseudo](./stack_queue_pseudo/README.md)|
 |Challenge 12|[animal_shelter_queue](./animal_shelter_queue/README.md)|
 |Challenge13|[stack_queue_brackets](./stack_queue_brackets/README.md)|
+|Challenge14|[]()|
+|Challenge15|[Trees](./trees/README.md)|
+|Challenge16|[max-tree](./Max-tree/README.md)|
+|Challenge26|[Insertion Sort](./Insertion_Sort/insertion_sort.md)|
+|Challenge27|[Merge sort](./merge_sort/merge_sort.md)|
+
 

@@ -33,7 +33,7 @@ class BinaryTree:
         return result
 
     def in_order(self):
-        """method handle the in-order by recurssion and return the values in tree as array"""
+        """method handle the in-order by recurssion and return the values in tree as array left /Root /Right"""
         if not self.root:
             return self.root
 
@@ -196,6 +196,9 @@ if __name__ == "__main__":
     print(bst.contains(5))
     print(bst.contains(1))
     print (bst.post_order())
+    
+
+    print (tree.sum_odds())
 
 
     # print(tree.breadth_first())
