@@ -22,5 +22,6 @@
 |Challenge16|[max-tree](./Max-tree/README.md)|
 |Challenge26|[Insertion Sort](./Insertion_Sort/insertion_sort.md)|
 |Challenge27|[Merge sort](./merge_sort/merge_sort.md)|
+|Challenge28|[Sorting: Comparisons](./sorting_comparison/)|
 
 
