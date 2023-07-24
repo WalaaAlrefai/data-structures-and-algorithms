@@ -24,5 +24,6 @@
 |Challenge27|[Merge sort](./merge_sort/merge_sort.md)|
 |Challenge28|[Sorting: Comparisons](./sorting_comparison/)|
 |Challenge30|[Hash Tables](./hash_table/hash_table.md)|
+|Challeng31|[hashmap-repeated-word](./hashmap_repeated_word/hashmap-repeated-word.md)|
 
 
