@@ -3,10 +3,8 @@
 
 ## Challenge Type: ` Code Challenge / Algorithm`
 
-
 ## [Code](hashmap-repeated-word.py)
 ## [tests](../tests/test_hash_map.py)
-
 
 ## Challenge:  
 
