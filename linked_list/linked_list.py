@@ -181,27 +181,10 @@ def reverse_linked_list(ll):
         return reversed_ll
 
 
-# def palindrome(ll):
-#         def helper(ll):
-        
-#          current = ll.head
-#          previous = None
-#          while current:
-#            next_node = current.next
-#            current.next = previous
-#            previous = current
-#            current = next_node
-#            reversed_ll = LinkedList()
-#            reversed_ll.head = previous
-#          return reversed_ll
-        
-#         if helper(ll)==ll:
-#             return True
-#         else:
-#             return False
 
 
 def is_palindrome(ll):
+
     def reverse(head):
      previous = None
      current = head
@@ -231,40 +214,6 @@ def is_palindrome(ll):
 
     return True
 
-def reverse(head):
-    previous = None
-    current = head
-    while current:
-        next_node = current.next
-        current.next = previous
-        previous = current
-        current = next_node
-    return previous
-
-def palindrome(ll):
-    def helper(ll):
-        print (222222,ll)
-        return ll
-
-    def reverse(ll):
-        current = ll.head
-        previous = None
-        while current:
-            next_node = current.next
-            current.next = previous
-            previous = current
-            current = next_node
-        reversed_ll = LinkedList()
-        reversed_ll.head = previous
-        print (111111,reversed_ll)
-        return reversed_ll
-
-    if helper(ll) == reverse(ll):
-        return True
-    else:
-        return False
-
-
 
 if __name__=="__main__":
     ll = LinkedList()
@@ -290,7 +239,7 @@ if __name__=="__main__":
     ll.insert_after(13,14.5)
     print(ll)
     print(reverse_linked_list(ll))
-    print(palindrome(ll))
+    print(1111111111,is_palindrome(ll))
     ll2.insert("a")
     ll2.insert("b")
     ll2.insert("c")
@@ -304,4 +253,6 @@ if __name__=="__main__":
     ll3.insert("a")
     
     print(is_palindrome(ll2))
+
     print(is_palindrome(ll3))
+    
