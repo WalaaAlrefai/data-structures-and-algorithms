@@ -71,6 +71,25 @@ class LinkedList:
 
         return string + 'None'
     
+    def insert_after(self,value,new_value):
+        """
+        Insert a new_value after the given value of linked list
+        Arguments: two values (value for search , value we trying to insert).
+        """
+
+        current=self.head
+        while current is not None:
+           if current.value == value :
+               node = Node(new_value)
+               node.next = current.next
+               current.next = node
+
+               return
+           current=current.next
+
+           
+
+    
 
 if __name__=="__main__":
     ll = LinkedList()
@@ -83,3 +102,6 @@ if __name__=="__main__":
     print (ll)
     print(ll.includes(3))
     print(ll.includes(11))
+
+    ll.insert_after(12,8)
+    print(ll)
