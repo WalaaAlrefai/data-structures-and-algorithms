@@ -215,6 +215,31 @@ def is_palindrome(ll):
     return True
 
 
+def swap_pairs(ll):
+    dummy = Node(0)
+    dummy.next = ll.head
+    prev = dummy
+
+    while ll.head and ll.head.next:
+        # Nodes to swap
+        first_node = ll.head
+        second_node = ll.head.next
+
+        # Swapping
+        prev.next = second_node
+        first_node.next = second_node.next
+        second_node.next = first_node
+
+        # Move pointers forward
+        prev = first_node
+        ll.head = first_node.next
+        swapped_ll = LinkedList()
+        swapped_ll.head = dummy.next
+    return swapped_ll
+
+
+
+
 if __name__=="__main__":
     ll = LinkedList()
     ll2 = LinkedList()
@@ -227,6 +252,7 @@ if __name__=="__main__":
     print (ll)
     print(ll.includes(3))
     print(ll.includes(11))
+    print("swaping",swap_pairs(ll))
     ll.append(9)
     ll.append(8)
     ll.append(7)
@@ -239,7 +265,7 @@ if __name__=="__main__":
     ll.insert_after(13,14.5)
     print(ll)
     print(reverse_linked_list(ll))
-    print(1111111111,is_palindrome(ll))
+    print(is_palindrome(ll))
     ll2.insert("a")
     ll2.insert("b")
     ll2.insert("c")
