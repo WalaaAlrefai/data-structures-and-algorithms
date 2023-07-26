@@ -175,10 +175,9 @@ def reverse_linked_list(ll):
           next_node = current.next
           current.next = previous
           previous = current
-          current = next_node
-          reversed_ll = LinkedList()
-          reversed_ll.head = previous
-        return reversed_ll
+          current = next_node  
+          ll.head = previous
+        return ll
 
 
 
