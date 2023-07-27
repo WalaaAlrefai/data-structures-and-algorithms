@@ -2,6 +2,12 @@ from trees.trees import BinaryTree,TNode
 from hash_table.hash_table import Hashtable
 
 def tree_intersection(tree_1,tree_2):
+    """
+    function called tree_intersection that takes two binary trees as parameters.
+ Using your Hashmap implementation as a part of your algorithm, return a set of values found in both trees.
+Arguments: two binary trees
+Return: set of values found in both trees.
+    """
     common = []
     binary_tree1 = tree_1.pre_order()
     binary_tree2 = tree_2.pre_order()
