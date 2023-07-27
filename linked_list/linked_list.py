@@ -146,8 +146,7 @@ class LinkedList:
             return list_counter[list_size - (k+1) ].value
         else:
          raise Exception('There is no value at that index!')
-    
-        
+      
 
 def check_palindrome(list):
         current = list.head
@@ -171,7 +170,7 @@ def check_palindrome(list):
 def reverse_linked_list(ll):
         current = ll.head
         previous = None
-        while current:
+        while current: 
           next_node = current.next
           current.next = previous
           previous = current
@@ -206,23 +205,23 @@ def is_palindrome(ll):
     current1 = ll.head
     current2 = reversed_second_half
     while current1 and current2:
-        if current1.value != current2.value:
-            return False
-        current1 = current1.next
-        current2 = current2.next
-
-    return True
+        if current1.value == current2.value:
+            current1 = current1.next
+            current2 = current2.next
+            return True     
+        return False
 
 
 def swap_pairs(ll):
     dummy = Node(0)
+    curr=ll.head
     dummy.next = ll.head
     prev = dummy
 
-    while ll.head and ll.head.next:
+    while curr and curr.next:
         # Nodes to swap
-        first_node = ll.head
-        second_node = ll.head.next
+        first_node = curr
+        second_node = curr.next
 
         # Swapping
         prev.next = second_node
@@ -231,10 +230,9 @@ def swap_pairs(ll):
 
         # Move pointers forward
         prev = first_node
-        ll.head = first_node.next
-        swapped_ll = LinkedList()
-        swapped_ll.head = dummy.next
-    return swapped_ll
+        curr = prev.next
+    ll.head=dummy.next
+    return ll
 
 
 
@@ -263,7 +261,9 @@ if __name__=="__main__":
     ll.insert_after(15,14.5)
     ll.insert_after(13,14.5)
     print(ll)
+    print(ll.kthFromEnd(3))
     print(reverse_linked_list(ll))
+    print(ll.kthFromEnd(3))
     print(is_palindrome(ll))
     ll2.insert("a")
     ll2.insert("b")
