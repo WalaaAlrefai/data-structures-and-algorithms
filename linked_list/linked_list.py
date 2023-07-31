@@ -263,11 +263,12 @@ def is_palindrome(ll):
     current1 = ll.head
     current2 = reversed_second_half
     while current1 and current2:
-        if current1.value == current2.value:
-            current1 = current1.next
-            current2 = current2.next
-            return True     
-        return False
+        if current1.value != current2.value:
+            return False
+        current1=current1.next
+        current2=current2.next
+    return True     
+    
 
 
 def swap_pairs(ll):
@@ -347,7 +348,18 @@ def rotateRight(ll,k):
     curr.next=None
     ll.head= newhead
     return ll
+def removeElements(ll,val):
 
+        dummyHead=Node(0)
+        dummyHead.next=ll.head
+        current=dummyHead
+        while current.next :
+            if current.next.value == val :
+                current.next=current.next.next
+            else:
+                current=current.next
+        ll.head= dummyHead.next
+        return ll
 
 if __name__=="__main__":
     ll = LinkedList()
@@ -415,5 +427,14 @@ if __name__=="__main__":
     print(deleteDuplicates(ll6))
     print(ll)
     print(rotateRight(ll,2))
+    ll7=LinkedList()
+    ll7.append(1)
+    ll7.append(1)
+    ll7.append(2)
+    ll7.append(1)
+    print(ll7)
+    print(is_palindrome(ll7))
+    print(ll)
+    print(removeElements(ll,2))
     
     
