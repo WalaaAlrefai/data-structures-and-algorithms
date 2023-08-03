@@ -30,5 +30,5 @@ def test_example():
         ["wrath", "anger", "delight"],
 
     ]
-
+    
     assert actual == expected

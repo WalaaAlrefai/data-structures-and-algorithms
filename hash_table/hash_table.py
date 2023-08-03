@@ -5,6 +5,7 @@ class Hashtable:
         self._size = size
         self._buckets = [None] * size
         self._keys = []
+        self.table={}
 
     def _hash(self, key):
         '''
@@ -67,6 +68,7 @@ class Hashtable:
         return a list of all keys presents in the hash_table
         '''
         return self._keys
+    
     
    
     

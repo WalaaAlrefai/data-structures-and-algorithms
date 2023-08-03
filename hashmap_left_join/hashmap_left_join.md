@@ -26,6 +26,7 @@ Write a function that LEFT JOINs two hashmaps into a single data structure.
 
 
 ## Whiteboard Process
+![whiteBoad](CC33.jpg)
 
 
 ## Approach & Efficiency
