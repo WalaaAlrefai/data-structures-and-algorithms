@@ -148,7 +148,7 @@ class LinkedList:
     #      raise Exception('There is no value at that index!')
     def kthFromEnd(self, k: int) -> int:
         slow=fast=ll.head
-        for i in range (k):
+        for i in range (k+1):
             fast=fast.next
         if not fast:
             return Exception('There is no value at that index!')
