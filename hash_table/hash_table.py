@@ -69,6 +69,3 @@ class Hashtable:
         '''
         return self._keys
     
-    
-   
-    
