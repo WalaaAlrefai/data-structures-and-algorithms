@@ -20,11 +20,24 @@ class Graph:
         self._adj_list = {}
 
     def add_node(self, val):
+        """
+        Arguments: value
+        Returns: The added vertex
+        Add a vertex to the graph
+
+        """
         v = Vertex(val)
         self._adj_list[v] = []
         return v
 
     def add_edge(self, start, end, weight=1):
+        """
+        Arguments: 2 vertices to be connected by the edge, weight (optional)
+        Returns: nothing
+        Adds a new edge between two vertices in the graph
+        If specified, assign a weight to the edge
+        Both vertices should already be in the Graph
+        """
         if start not in self._adj_list:
             raise KeyError('Start vertex not in graph!')
         if end not in self._adj_list:
@@ -35,12 +48,28 @@ class Graph:
         return edge
 
     def get_nodes(self):
+        """
+        Arguments: none
+        Returns all of the vertices in the graph as a collection (set, list, or similar)
+        Empty collection returned if there are no vertices
+        """
         return list(self._adj_list) or None
 
     def get_neighbors(self, vertex):
+        """
+        Arguments: vertex
+        Returns a collection of edges connected to the given vertex
+        Include the weight of the connection in the returned collection
+        Empty collection returned if there are no vertices
+        """
         return self._adj_list[vertex]
 
     def size(self):
+        """
+        Arguments: none
+        Returns the total number of vertices in the graph
+        0 if there are none
+        """
         return len(self._adj_list)
 
     def __str__(self):
