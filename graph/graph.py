@@ -1,9 +1,11 @@
 class Vertex:
     def __init__(self, value):
         self.value = value
+        self.visited = False  # Add a visited attribute
 
     def __str__(self):
         return str(self.value)
+
 
 
 class Edge:
@@ -38,6 +40,7 @@ class Graph:
         If specified, assign a weight to the edge
         Both vertices should already be in the Graph
         """
+        
         if start not in self._adj_list:
             raise KeyError('Start vertex not in graph!')
         if end not in self._adj_list:
@@ -92,13 +95,83 @@ class Graph:
                     breadth.append(neighbor.vertex)
 
         return nodes
+    
+    def depth_first(self, start_vertex):
+        def dfs_recursive(vertex):
+            result.append(vertex)
+            vertex.visited = True
+            for edge in self.get_neighbors(vertex):
+                neighbor = edge.vertex
+                if not neighbor.visited:
+                    dfs_recursive(neighbor)
+        
+        result = []
+        dfs_recursive(start_vertex)
+        
+        return result
+
 
 
 if __name__ == "__main__":
     graph = Graph()
-    a = graph.add_node('a')
-    b = graph.add_node('b')
-    c = graph.add_node('c')
-    e_1 = graph.add_edge(a, b, 2)
-    e_2 = graph.add_edge(a, c, 2)
-    print(graph.get_nodes())
+    a = graph.add_node("A")
+    b = graph.add_node("B")
+    c = graph.add_node("C")
+    d = graph.add_node("D")
+    e = graph.add_node("E")
+    f = graph.add_node("F")
+    g = graph.add_node("G")
+    h = graph.add_node("H")
+    graph.add_edge(a, b,2)
+    graph.add_edge(b, c,2)
+    graph.add_edge(c, g,2)
+    graph.add_edge(a,d,2)
+    graph.add_edge(b,d,2)
+    graph.add_edge(d, e,2)
+    graph.add_edge(d, h,2)
+    graph.add_edge(d,f,2)
+    graph.add_edge(h, f,2)
+
+    start_vertex = d
+    traversal_result = graph.depth_first(start_vertex)
+    print("Depth-First Traversal Result:")
+    for vertex in traversal_result:
+        print(vertex.value, end=' ')
+    
+    # Usage example
+    # graph = Graph()
+    # vertex1 = graph.add_node(1)
+    # vertex2 = graph.add_node(2)
+    # graph.add_edge(vertex1, vertex2)
+
+    # start_vertex = vertex1
+    # traversal_result = graph.depth_first(start_vertex)
+    # print("Depth-First Traversal Result:")
+    # for vertex in traversal_result:
+    #     print(vertex.value, end=' ')
+    # graph = Graph()
+    # a = graph.add_node('a')
+    # b = graph.add_node('b')
+    # c = graph.add_node('c')
+    # e_1 = graph.add_edge(a, b, 2)
+    # e_2 = graph.add_edge(a, c, 2)
+    # print(graph.get_nodes())
+
+    # # Creating a sample graph
+    # graph = Graph()
+    # node1 = graph.add_node(1)
+    # node2 = graph.add_node(2)
+    # node3 = graph.add_node(3)
+    # node4 = graph.add_node(4)
+
+    # # graph.add_node(node1)
+    # # graph.add_node(node2)
+    # # graph.add_node(node3)
+    # # graph.add_node(node4)
+
+    # e1= graph.add_edge(node1, node2)
+    # e2=graph.add_edge(node1, node3)
+    # e3=graph.add_edge(node2, node4)
+    # print(graph.get_nodes())
+    
+
